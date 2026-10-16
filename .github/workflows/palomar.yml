@@ -13,4 +13,4 @@ jobs:
       request_id: erdos662test
       mode: full
       execution_profile: palomar-standard-v1
-      options: '{"authorization_relationship":"approved","comparator_config_path":"comparator.json"}'
+      options: '{"authorization_relationship":"I have approval from a responsible author or maintainer","comparator_config_path":"comparator.json"}'
