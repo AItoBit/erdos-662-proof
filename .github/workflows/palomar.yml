@@ -10,7 +10,7 @@ jobs:
       repository: ${{ github.repository }}
       commit: 91f70364bf88c9ae8181aa82a703a7ba2d369901
       pipeline_commit: d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44
-      request_id: erdos662-${{ github.run_id }}
+      request_id: erdos662test
       mode: full
       execution_profile: palomar-standard-v1
       options: '{"authorization_relationship":"approved","comparator_config_path":"comparator.json"}'
