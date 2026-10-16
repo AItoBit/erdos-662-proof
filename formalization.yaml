@@ -1,0 +1,87 @@
+version: "v0.4"
+project:
+  name: "Erdos 662: corrected global threshold conjecture"
+  description: >-
+    Disproves an explicitly corrected global threshold formulation of Erdos
+    problem 662. For each radius, the conjecture bounds the average number of
+    nearby points in every sufficiently large one-separated planar set by the
+    unit triangular lattice's neighbor count. An exact rational oblique lattice
+    and separated finite replicas violate the bound at radius six.
+  authors: ["Colin Snyder", "AItoBit"]
+  license: "Apache-2.0"
+  responsible_maintainers: ["AItoBit"]
+classification:
+  arxiv: ["math.MG", "math.CO"]
+  msc2020: ["52C15", "52C10"]
+sources:
+  - title: "Erdos 662 Star Fleet verification archive"
+    authors: ["Colin Snyder"]
+    id: "https://www.starfleetmath.com/downloads/verify/erdos-662/erdos-662-solution.zip"
+    type: "formalization"
+    relationship: "adapts"
+    license: "No license in original archive; user selected Apache-2.0 for this port"
+    author_endorsement: "other"
+    note: >-
+      Original archive SHA256 C43DD2685367A2ECAEFFAF993E1154F51F878DB30AC988A9DD2BF57B4AC5AA54.
+      The user attested to author/maintainer approval for submission and chose
+      Apache-2.0. Approval was not independently obtained from the author.
+      Research proofs are ported from Lean 4.31.0 through a verified 4.33.1
+      version to the Palomar-supported 4.35.0-rc2 environment.
+  - title: "Some of my favourite unsolved problems"
+    authors: ["Paul Erdos"]
+    type: "article"
+    location: "Mathematica Japonica 46(3) (1997), 527-537, p.532"
+    relationship: "background"
+    note: "The surviving problem text is malformed; the chosen correction is explicit."
+  - title: "Erdos Problem 662"
+    authors: ["Thomas Bloom"]
+    id: "https://www.erdosproblems.com/662"
+    type: "web discussion"
+    relationship: "background"
+related_formalizations:
+  - id: "https://www.starfleetmath.com/solutions/24a9506e-d6a5-46c5-a2b0-01554eae5568"
+    relationship: "adapts"
+    note: "Existing proof; no novelty claimed for the counterexample."
+status:
+  scope: >-
+    Complete refutation of the chosen corrected global closed-threshold
+    conjecture, including its sufficiently-large quantifier. The malformed
+    original does not identify a unique intended statement. Other local,
+    strict-shell and smallest-distance-multiplicity readings are outside scope.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+automation:
+  methods:
+    - method: "agent"
+      models: ["OpenAI Codex"]
+      framework: "Erdos Research Lab"
+      tool_setup: "Independent source audit, Lean builds and axiom audits; exact Python arithmetic checks"
+      prompting_notes: "Preserve the independently frozen corrected global statement."
+  spend_usd: "not tracked"
+  notes: >-
+    The substantive source proof was already public. This work adds selective
+    imports, public modules, linter repairs and an independently stated global
+    conjecture with a bridge proof. Challenge's intentional proof hole is
+    excluded from the proof counts.
+fidelity:
+  divergences: >-
+    Adds the missing global normalization by the number of points and uses the
+    actual cumulative triangular-lattice neighbor count. This is a disclosed
+    reconstruction of inconsistent text, not a uniquely authenticated reading.
+review:
+  status: "Independent AI statement and mathematical audits; no human peer review claimed"
+  reviewers: ["Independent Codex agents"]
+  notes: >-
+    Exact arithmetic and source-facing statements were independently audited.
+    Principal proof axiom lists and the final global bridge are inspected in
+    AxiomAudit.lean. Palomar mechanical and editorial review are separate checks.
+alignment:
+  namespace: "Erdos662"
+  statements:
+    - source: "Corrected global closed-threshold formulation of problem 662"
+      lean: "Erdos662.not_globalThresholdConjecture"
+      module: "Solution"
+      status: "proved"
+      note: "A radius-six counterexample refutes the full chosen universal claim."
+acknowledgements: "Colin Snyder / Star Fleet, Mathlib contributors, and OpenAI Codex"

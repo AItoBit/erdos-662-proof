@@ -1,0 +1,25 @@
+name = "erdos662"
+version = "0.1.0"
+defaultTargets = ["Research", "Statement", "Solution", "Challenge"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+
+[[lean_lib]]
+name = "Research"
+
+[[lean_lib]]
+name = "Statement"
+roots = ["Statement"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+[lean_lib.leanOptions]
+warn.sorry = false

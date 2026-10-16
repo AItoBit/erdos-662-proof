@@ -1,0 +1,29 @@
+Erdos 662: corrected global threshold formulation
+
+The mathematical construction and the Research proof development are adapted
+from Colin Snyder / Star Fleet Math's public verification archive:
+https://www.starfleetmath.com/downloads/verify/erdos-662/erdos-662-solution.zip
+Retrieved 2026-10-16, SHA256:
+C43DD2685367A2ECAEFFAF993E1154F51F878DB30AC988A9DD2BF57B4AC5AA54
+
+Original environment: Lean 4.31.0, Mathlib
+fabf563a7c95a166b8d7b6efca11c8b4dc9d911f.
+Intermediate verified port: Lean 4.33.1, Mathlib
+0df444a360eaa60ab8c11dca51a86af692955474.
+Palomar port: Lean 4.35.0-rc2, Mathlib
+065356127b1dc0016f66b7283ce0ce2c4055aa55.
+
+The original archive has no license notice. In the preparing conversation,
+the user confirmed author/maintainer approval for submission and selected
+Apache-2.0 for the submitted code. This records the user's attestation; it is
+not an independently obtained statement from the original author.
+
+AItoBit's preparation uses OpenAI Codex to port imports and module visibility,
+resolve new linter warnings, state the global conjecture independently, and
+connect its refutation to the existing radius-six proof. No mathematical
+novelty is claimed for the counterexample in this repository.
+
+The source problem is Paul Erdos, Some of my favourite unsolved problems,
+Mathematica Japonica 46(3) (1997), 527-537, p.532. Its surviving transcription
+is malformed. The exact corrected interpretation is disclosed in Challenge
+and formalization.yaml; unique historical intent is not asserted.

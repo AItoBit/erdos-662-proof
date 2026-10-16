@@ -1,0 +1,7 @@
+.lake/
+build-logs/
+lake-manifest.json.bak
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
